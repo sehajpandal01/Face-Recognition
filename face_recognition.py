@@ -23,7 +23,6 @@ class FaceRecognitionApp:
     def preprocess_face(self, face_img):
         if len(face_img.shape) == 3:
             face_img = cv2.cvtColor(face_img, cv2.COLOR_BGR2GRAY)
-        
         face_img = cv2.resize(face_img, self.img_size)
         
         face_img = face_img.astype('float32') / 255.0
