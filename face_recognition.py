@@ -16,7 +16,6 @@ class FaceRecognitionApp:
         self.model = None
         self.label_encoder = None
         self.img_size = (96, 96)
-        
     def detect_faces(self, image):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         faces = self.face_cascade.detectMultiScale(gray, 1.3, 5)
