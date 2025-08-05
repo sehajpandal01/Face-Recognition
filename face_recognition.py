@@ -26,7 +26,7 @@ class FaceRecognitionApp:
         face_img = cv2.resize(face_img, self.img_size)
         face_img = face_img.astype('float32') / 255.0
         face_img = face_img.reshape(1, self.img_size[0], self.img_size[1], 1)
-    
+
         return face_img
     
     def load_dataset(self, dataset_path):
