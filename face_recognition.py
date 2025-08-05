@@ -89,7 +89,7 @@ class FaceRecognitionApp:
         X_train, X_test, y_train, y_test = train_test_split(
             faces, categorical_labels, test_size=0.2, random_state=42
         )
-        
+    
         num_classes = len(self.label_encoder.classes_)
         self.model = self.create_model(num_classes)
         
